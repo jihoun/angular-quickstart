@@ -50,7 +50,7 @@ import { HeroService } from './hero.service';
     HeroSearchComponent
   ],
   providers: [
-    HeroService,
+    HeroService
   ],
   bootstrap: [AppComponent]
 })
