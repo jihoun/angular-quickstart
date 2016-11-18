@@ -9,10 +9,10 @@ import { Hero } from './hero';
   moduleId: module.id,
   selector: 'hero-search',
   templateUrl: 'hero-search.component.html',
-  styleUrls: [ 'hero-search.component.css' ],
+  // styleUrls: [ 'hero-search.component.css' ],
   providers: [HeroSearchService]
 })
-  
+
 export class HeroSearchComponent implements OnInit {
   heroes: Observable<Hero[]>;
   private searchTerms = new Subject<string>();
@@ -40,7 +40,7 @@ export class HeroSearchComponent implements OnInit {
         return Observable.of<Hero[]>([]);
       });
   }
-  
+
   gotoDetail(hero: Hero): void {
     let link = ['/detail', hero.id];
     this.router.navigate(link);
